@@ -27,7 +27,7 @@ namespace EntryPoint
         public MainPage()
         {
             this.InitializeComponent();
-            this.ButtonControl.Click += async delegate (object sender, RoutedEventArgs e)
+            this.ButtonControl.Click += async  (object sender, RoutedEventArgs e) =>
             {
                 var dialog = new MessageDialog("Hello World");
                 await dialog.ShowAsync();
