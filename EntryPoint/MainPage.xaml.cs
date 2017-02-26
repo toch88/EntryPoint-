@@ -29,7 +29,7 @@ namespace EntryPoint
             this.InitializeComponent();
             this.ButtonControl.Click += async  (s, e) =>
             {
-                var dialog = new MessageDialog("Hello World");
+                var dialog = new MessageDialog("Tekst");
                 await dialog.ShowAsync();
             };
         }
