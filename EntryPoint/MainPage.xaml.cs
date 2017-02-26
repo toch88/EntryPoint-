@@ -27,13 +27,13 @@ namespace EntryPoint
         public MainPage()
         {
             this.InitializeComponent();
-            this.ButtonControl.Click += ButtonControl_Click;
+            this.ButtonControl.Click += async delegate (object sender, RoutedEventArgs e)
+            {
+                var dialog = new MessageDialog("Hello World");
+                await dialog.ShowAsync();
+            };
         }
 
-        private async void ButtonControl_Click(object sender, RoutedEventArgs e)
-        {
-            var dialog = new MessageDialog("Hello World");
-            await dialog.ShowAsync();
-        }
+        
     }
 }
